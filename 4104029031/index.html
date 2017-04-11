@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>小考</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        .red {
+            color: red;
+            font-size: 50pt;
+        }
+    </style>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+    <script language="JavaScript">
+        function createTable() {
+            var html = document.getElementById("html");
+            html.innerHTML = "HTML5";
+            var css = document.getElementById("CSS");
+            css.innerHTML = "CSS3";
+            var JavaScript = document.getElementById("jsp");
+            jsp.innerHTML = "JSPMySQL";
+        }
+
+        function createTable1() {
+            var web = document.getElementById("web");
+            web.innerHTML = "Web Programming-4104029031";
+        }
+
+        function createTable2() {
+            $(document).ready(function() {
+                $('li').mouseenter(function() {
+                        $(this).addClass("red");
+                    })
+                    .mouseleave(function() {
+                        $(this).removeClass("red");
+                    });
+            });
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <h1 id="web">Web Programming</h1>
+    <hr/>
+    <p>Content</p>
+
+    <ul>
+        <li id="html">HTML</li>
+        <li id="CSS">CSS</li>
+        <li>DOM</li>
+        <li>JavaScript</li>
+        <li id="jsp">JSP</li>
+    </ul>
+    <input type="button" name="enter" value="以JS更改元素內容" onClick="createTable()">
+    <input type="button" name="enter" value="以jQuery更改CSS" onClick="createTable2()">
+    <input type="button" name="enter" value="WEB學號" onClick="createTable1()">
+    <div>
+</body>
+
+</html>
