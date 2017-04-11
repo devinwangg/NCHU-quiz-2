@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<style>
+    	header { 
+    		display: block;
+		}
+        h1 { 
+       		border-bottom: 1px solid black; 
+            padding-bottom: 0.5cm;
+        }
+    </style>
+	<title>test2</title>
+</head>
+<body>
+	<h1>Web Programming</h1>
+	<p>Content
+		<ul class="1">
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>DOM</li>
+		<li>JavaScript</li>
+		<li>JSP</li>
+        </ul>
+        
+		<input type="button" value="以 JS 修改" onclick="myFunction1()">
+		<input type="button" value="以jQuery改CSS" onclick="myFunction2()">
+		<input type="button" value="Add Student Id to Header" onclick="myFunction3()">
+		
+    </p>
+    
+    <script>
+		
+		$(document).ready(function(){
+    	$('.1').hover(function () {
+    	$(this).css('color', 'red');
+		},
+		function () {
+   		$(this).css('color', 'black');
+		});
+});
+	</script>
+</body>
+</html>
