@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="UTF-8"> 
+	<style type="text/css">
+	.red { color: red; } 
+	p {
+    font-size: 150%;
+	}
+	</style> 
+	<script src="jquery-1.7.1.js"></script> 
+	<script language="JavaScript"> 
+	$(document).ready(function() { 
+
+	$('#switcher').click(function(){ 
+		$(document).ready(function() { 
+		/*
+			$('li').mouseenter(function() { 
+			$(this).addClass("red");
+			$(this).css('fontSize', 'larger'); 
+			})
+			.mouseleave(function() { 
+			$(this).removeClass("red");
+			$(this).css('fontSize', 'medium')
+			}); */
+			$(document).on('mouseenter', 'li', function() {
+				$(this).addClass("red");
+			$(this).css('fontSize', 'larger'); 
+			});
+			$(document).on('mouseleave', 'li', function() {
+			$(this).removeClass("red");
+			$(this).css('fontSize', 'medium')
+			});
+		}); 
+		});
+		});
+
+		function myfunction(){
+			var list = document.getElementById("L1");
+			list.removeChild(list.childNodes[0]);
+			var textnode = document.createTextNode("HTML5");
+			document.getElementById("L1").appendChild(textnode);
+			var list = document.getElementById("L2");
+			list.removeChild(list.childNodes[0]);
+			var textnode = document.createTextNode("CSS3");
+			document.getElementById("L2").appendChild(textnode);
+			var node = document.createElement("LI");
+			var textnode = document.createTextNode("MySQL");
+			node.appendChild(textnode);
+			document.getElementById("myList").appendChild(node);
+		}
+		function myfunction2(){
+			var list = document.getElementById("BB");
+			list.removeChild(list.childNodes[0]);
+			var textnode = document.createTextNode("Web Programming_4102029001");
+			document.getElementById("BB").appendChild(textnode);
+		}
+	</script> 
+</head> 
+<body> 
+	<h1 id="BB">Web Programming</h1>
+	<HR>
+	<p>Content</p>
+	<ul id="myList">
+		<li id="L1">HTML</li>
+		<li id="L2">CSS</li>
+		<li id="L3">DOM</li>
+		<li id="L4">JavaScript</li>
+		<li id="L5">Jsp</li>
+	</ul>
+	<br>
+	<input type="button" value="以JS更改元素內容" onclick="myfunction()"><input id="switcher" type="button" value="以JQuery更改CSS"><input type="button" value="button" onclick="myfunction2()">
+</body> 
+</html>
+
