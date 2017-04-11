@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <style type="text/css">
+        .bigred {
+            color: red;
+            font-size: 16pt
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id='demo'>Web Programming</h1>
+    <HR>
+    <p>Content</p>
+    <ul>
+        <li id='1'>HTML</li>
+        <li id='2'>CSS</li>
+        <li>DOM</li>
+        <li>JavaScript</li>
+        <li id='3'>JSP</li>
+        <input type='button' value='以JS更改內容' onclick='change()'>
+        <input type="button" value="以jquery變更CSS" onclick='change2()'>
+        <button onclick="myFunction()">Click me</button>
+
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+        <script language="JavaScript">
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Web Programming 4104029011";
+}
+function change(){  document.getElementById('1').innerHTML='HTML5';
+document.getElementById('2').innerHTML='CSS3';
+var p1 = document.getElementById('3');
+var t1 = document.createTextNode('MYSQL');
+p1.appendChild(t1);
+
+}
+function change2(){
+    $(document).ready(function() {
+        $('li').mouseenter(function() {
+                $(this).addClass("bigred");
+            })
+            .mouseleave(function() {
+                $(this).removeClass("bigred");
+            });
+    });}
+
+</script>
+
+
+</body>
+
+</html>
